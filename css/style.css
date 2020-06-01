@@ -1,0 +1,234 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 100%/1.4em 'San Francisco';
+	color: #000;
+	/* background-color: #fae9e0; */ /* Цвет фона веб-страницы */
+	text-align: center;
+	/*max-width: 600px;*/
+}
+
+
+/* подгрузка шрифта */
+@font-face {
+    font-family: 'San Francisco'; /* Имя шрифта */
+    src: url(../font/SFUIDisplay-Regular.otf); /* Путь к файлу со шрифтом */
+   }
+
+p {
+	font-family: 'San Francisco';
+}
+
+h1 {
+	font-weight: normal;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+.wrapper {
+	width: 650px;
+	margin:0 auto;
+}
+
+.mytitle {
+	line-height: 200%;
+	padding: 40px;
+}
+
+.videotitle {
+	line-height: 200%;
+	padding: 50px 1px 50px;
+	font-size: 7pt;
+}
+
+.videotitle .vidundertitle {
+	font-size: 9pt;
+	color: #7e7e7e;
+}
+
+.container {
+	/* width: 90%; */
+	margin: auto;
+}
+
+.frontblock {
+	background: #fafafa;
+}
+
+.container .cols {
+	float: left;
+
+}
+
+.pinkback {
+	background: #fae9e0;
+}
+
+.dostavkatitle {
+	padding: 50px 0 20px;
+	font-size: 17px;
+}
+
+.dostavkatitle img{	
+	margin-bottom: 3px;
+}
+
+.dostavkatitle strong{	
+	font-size: 15pt;
+}
+
+.price {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.stamp {
+	padding: 20px;
+}
+
+/* Кнопка */
+.btn-class a {
+	color: #fafafa;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.btn-class {
+ display: inline-block;
+ border:1px solid #334367;
+ border-radius: 3px 3px 3px 3px;
+ -webkit-border-radius: 3px 3px 3px 3px;
+ -moz-border-radius: 3px 3px 3px 3px;
+ width: auto;
+ height: auto;
+ padding: 6px 14px;
+ background-image: linear-gradient(to top, #2E4274, #6079B2);
+}
+
+.btn-class:hover {
+ border:1px solid #383E96;
+ background-image: linear-gradient(to top, #3c4b73, #7386b1);
+}
+
+.btn-class:active {
+ border:1px solid #383E96;
+ background-image: linear-gradient(to top, #243358, #526796);
+}
+
+.number {
+	padding-top: 3px;
+	font-size: 22px;
+}
+
+.copyright {
+	text-align: left;
+	font-size: 10px;
+	margin: 0 10px 10px 10px;
+	color: #969a99;
+	border-top:1px solid #c8c8c8;
+}
+
+/* сетка на 12 колонок */
+.container .cols.col-1  { width: 8.333333333333332%; }
+.container .cols.col-2  { width: 16.666666667%; }
+.container .cols.col-3  { width: 25%; }
+.container .cols.col-4  { width: 33.333333333%; }
+.container .cols.col-5  { width: 41.666666667%; }
+.container .cols.col-6  { width: 50%; }
+.container .cols.col-7  { width: 58.333333333%; }
+.container .cols.col-8  { width: 66.666666667%; }
+.container .cols.col-9  { width: 75%; }
+.container .cols.col-10 { width: 83.333333333%; }
+.container .cols.col-11 { width: 91.666666667%; }
+.container .cols.col-12 { width: 100%; }
+
+
+/* переключатель контента с десктопа на мобильный*/
+@media screen and (max-width: 321px) {
+	h1 {
+		color:#000;
+	}
+
+	body:after {
+		/*код для разрешений меньше max-width*/
+	}
+}
+
+/* flexible media */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.cycle-slideshow img {max-width: 100%; display: block; height: auto;}
+
+
+/* Slider */
+
+.cycle-slideshow {
+					width: 100%;
+					max-width: 1562px;
+					display: block;
+					position: relative;
+					margin: 20px auto;
+				}
+				/* .cycle-prev, .cycle-next {
+					width: 50px;
+					height: 50px;
+					display: block;
+					position: absolute;
+					top: 44%;
+					z-index: 99999;
+					cursor: pointer;
+					text-align: center;
+					color: #FFF;
+					font-size: 200%;
+				}
+				.cycle-prev {left: 10%;}
+				.cycle-next {right: 10%;} */
+				/* Thumbnails style*/
+.cycle-pager {
+					width: 100%;
+					text-align: center;
+					display: block;
+					position: absolute;
+					bottom: 15%;
+					z-index: 99999;
+					cursor: pointer;
+				}
+.cycle-pager a {
+					display: inline-block;
+					margin: 0 10px;
+					opacity: .5;
+					
+				}
+.cycle-pager .cycle-pager-active {opacity: 1; border-bottom: 2px solid rgba(211, 211, 211, 1);}
+.cycle-pager .thumb {
+					width: 10%;
+				}
+.thumb {display: block;}
+
+
+
+/* Video */
+
+.video-wrapper {
+				position: relative;
+				padding-bottom: 56.25%; /* video aspect ratio is 16:9 -> 9/16=0.5625; */
+			}
+
+.video-wrapper iframe {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+
